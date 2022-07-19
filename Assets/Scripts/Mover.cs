@@ -35,8 +35,8 @@ public class Mover : MonoBehaviour
     void MovePlayer()
     {
         // The player can be controlled with the keyboard -input-.
-        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        float xValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        float zValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         // transform.Translate(0.01f, 0, 0);
         transform.Translate(xValue, 0, zValue);
     }

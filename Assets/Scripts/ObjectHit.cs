@@ -6,7 +6,12 @@ public class ObjectHit : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other) 
     {
-        // When u hit the wall, calor will be changed.
-        GetComponent<MeshRenderer>().material.color = Color.black;
+        if (other.gameObject.tag == "Player")
+        {
+            // When u hit the wall (object/other), calor will be changed.
+            GetComponent<MeshRenderer>().material.color = Color.black;
+            // When u hit the other gameObj, tag will be changed; Untagged --> Hit.
+            gameObject.tag = "Hit";
+        }
     }
 }
